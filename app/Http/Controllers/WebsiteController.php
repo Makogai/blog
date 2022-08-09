@@ -19,4 +19,9 @@ class WebsiteController extends Controller
     {
         return view('about');
     }
+
+    public function single()
+    {
+        return view('single');
+    }
 }
