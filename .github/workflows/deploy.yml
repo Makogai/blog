@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: work around permission issue
-        run: git config --global --add safe.directory /var/www/websites/ikuzounscripted.me
+        run: git config --global --add safe.directory /var/www/websites/foryouth.me
       - uses: actions/checkout@v2
       - name: Deploy to server
         uses: appleboy/ssh-action@master
@@ -26,4 +26,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script: "cd /var/www/websites/ikuzounscripted.me && ./.scripts/deploy.sh"
+          script: "cd /var/www/websites/foryouth.me && ./.scripts/deploy.sh"
