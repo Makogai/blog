@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -31,41 +31,34 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    
+
     <header class="site-navbar pt-3" role="banner">
       <div class="container-fluid">
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-6 logo">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Hikers</a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0"><img src="images/logo.PNG" class="logo-img" style="max-width: 50%;" alt=""></a></h1>
           </div>
-          
+
           <div class="col-6 mr-auto py-3 text-right" style="position: relative; top: 3px;">
             <div class="social-icons d-inline">
-              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="{{$facebook}}"><span class="icon-facebook"></span></a>
               <a href="#"><span class="icon-twitter"></span></a>
               <a href="#"><span class="icon-instagram"></span></a>
             </div>
             <a href="#" class="site-menu-toggle js-menu-toggle text-black d-inline-block d-xl-none"><span class="icon-menu h3"></span></a></div>
           </div>
-          
+
           <div class="col-12 d-none d-xl-block border-top">
             <nav class="site-navigation text-center " role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
-                <li class="active"><a href="index.html">Homepage</a></li>
-                <li><a href="category.html">Lifestyle</a></li>
-                <li class="has-children">
-                  <a href="category.html">Inspiration</a>
-                  <ul class="dropdown">
-                    <li><a href="category.html">Architect</a></li>
-                    <li><a href="category.html">Minimal</a></li>
-                    <li><a href="category.html">Interior</a></li>
-                    <li><a href="category.html">Furniture</a></li>
-                  </ul>
-                </li>
-                <li><a href="category.html">Technology</a></li>
-                <li><a href="category.html">Latest</a></li>
+                <li class="{{strpos(Route::current()->getName(), '' ) !== false ? "active" : ""}}"><a href="index.html">Naslovna</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'about-us' ) !== false ? "active" : ""}}"><a href="/about-us">O nama</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/news">Novosti za mlade</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/stories">Priče mladih</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/reccomentadions">Preporuke</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/contact">Kontakt</a></li>
               </ul>
             </nav>
           </div>
@@ -74,10 +67,10 @@
       </div>
     </header>
 
-    
+
     <div class="slide-one-item home-slider owl-carousel">
-      
-    
+
+
     <div class="site-cover site-cover-sm same-height overlay" style="background-image: url('images/img_1.jpg');">
       <div class="container">
         <div class="row same-height align-items-center">
@@ -115,7 +108,7 @@
     </div>
 
     </div>
-    
+
     <div class="py-5">
       <div class="container">
         <div class="row">
@@ -163,7 +156,7 @@
       <div class="container">
 
         <div class="row align-items-stretch retro-layout">
-          
+
           <div class="col-md-5">
             <a href="single.html" class="hentry img-1 h-100 gradient" style="background-image: url('images/img_4.jpg');">
               <span class="post-category text-white bg-danger">Travel</span>
@@ -175,7 +168,7 @@
           </div>
 
           <div class="col-md-7">
-            
+
             <a href="single.html" class="hentry img-2 v-height mb30 gradient" style="background-image: url('images/img_1.jpg');">
               <span class="post-category text-white bg-success">Nature</span>
               <div class="text text-sm">
@@ -183,7 +176,7 @@
                 <span>February 12, 2019</span>
               </div>
             </a>
-            
+
             <div class="two-col d-block d-md-flex">
               <a href="single.html" class="hentry v-height img-2 gradient" style="background-image: url('images/img_2.jpg');">
                 <span class="post-category text-white bg-primary">Sports</span>
@@ -199,8 +192,8 @@
                   <span>February 12, 2019</span>
                 </div>
               </a>
-            </div>  
-            
+            </div>
+
           </div>
         </div>
 
@@ -404,11 +397,11 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
-    
+
     <div class="site-footer">
       <div class="container">
         <div class="row mb-5">
@@ -465,7 +458,7 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
@@ -481,6 +474,6 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>

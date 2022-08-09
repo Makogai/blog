@@ -20,6 +20,7 @@ return new class () extends Migration {
             $table->boolean('is_visible')->default(false);
             $table->string('seo_title', 60)->nullable();
             $table->string('seo_description', 160)->nullable();
+            $table->string('color', 24)->nullable();
             $table->timestamps();
         });
 
