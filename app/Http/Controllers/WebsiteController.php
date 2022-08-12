@@ -11,7 +11,12 @@ class WebsiteController extends Controller
     public function index()
     {
         $a = Post::all();
-        return view('welcome');
+        $recent = Post::query()->orderBy('created_at', 'desc')->with(['category', 'author'])->take(3)->get();
+
+        return view('welcome')->with([
+            'posts' => $a,
+            'recent' => $recent,
+        ]);
     }
 
     // about us function
@@ -20,8 +25,17 @@ class WebsiteController extends Controller
         return view('about');
     }
 
-    public function single()
+    public function single(Post $post)
     {
-        return view('single');
+        $recent = Post::query()->where('id', '=', $post->id)->orderBy('created_at', 'desc')->with(['category', 'author'])->take(3)->get();
+        return view('single')->with([
+            'post' => $post->load(['category', 'author']),
+            'recent' => $recent,
+        ]);
+    }
+
+    public function youthNews(Request $request){
+        $news = Post::where('blog_category_id', 1)->with('author')->paginate(10);
+        return view('youthNews')->with('news', $news);
     }
 }

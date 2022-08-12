@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hikers Blog &mdash; Colorlib Website Template</title>
+    <title>ForYouth </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="{{asset("fonts/icomoon/style.css")}}">
+    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{asset("css/magnific-popup.css")}}">
+    <link rel="stylesheet" href="{{asset("css/jquery-ui.css")}}">
+    <link rel="stylesheet" href="{{asset("css/owl.carousel.min.css")}}">
+    <link rel="stylesheet" href="{{asset("css/owl.theme.default.min.css")}}">
+    <link rel="stylesheet" href="{{asset("css/bootstrap-datepicker.css")}}">
+    <link rel="stylesheet" href="{{asset("fonts/flaticon/font/flaticon.css")}}">
+    <link rel="stylesheet" href="{{asset("css/aos.css")}}">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset("css/style.css")}}">
   </head>
   <body>
 
@@ -37,7 +37,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-6 logo">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0"><img src="images/logo.PNG" class="logo-img" style="max-width: 50%;" alt=""></a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0"><img src="{{asset("images/logo.PNG")}}" class="logo-img" style="max-width: 50%;" alt=""></a></h1>
           </div>
 
           <div class="col-6 mr-auto py-3 text-right" style="position: relative; top: 3px;">
@@ -54,10 +54,19 @@
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
                 <li class="{{strpos(Route::current()->getName(), 'home' ) !== false ? "active" : ""}}"><a href="/">Naslovna</a></li>
-                <li class="{{strpos(Route::current()->getName(), 'about-us' ) !== false ? "active" : ""}}"><a href="/about-us">O nama</a></li>
-                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/news">Novosti za mlade</a></li>
-                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/stories">Priče mladih</a></li>
-                <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/reccomentadions">Preporuke</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'about-us' ) !== false ? "active" : ""}}"><a href="/o-nama">O nama</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'novosti-za-mlade' ) !== false ? "active" : ""}}"><a href="/novosti-za-mlade">Novosti za mlade</a></li>
+                <li class="{{strpos(Route::current()->getName(), 'price-mladih' ) !== false ? "active" : ""}}"><a href="/price-mladih">Priče mladih</a></li>
+                  <li class="has-children">
+                      <a href="#">Preporuke</a>
+                      <ul class="dropdown">
+                          <li><a href="/reccomendation/tv">Film/Serija</a></li>
+                          <li><a href="/reccomendation/knjiga">Knjiga</a></li>
+                          <li><a href="/reccomendation/putovanje">Putovanje</a></li>
+                          <li><a href="/reccomendation/dogadjaj">Dogadjaj</a></li>
+                          <li><a href="/reccomendation/konkurs">Konkurs</a></li>
+                      </ul>
+                  </li>
                 <li class="{{strpos(Route::current()->getName(), 'admin/user' ) !== false ? "active" : ""}}"><a href="/contact">Kontakt</a></li>
               </ul>
             </nav>
@@ -130,19 +139,19 @@
 
   </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/aos.js"></script>
+  <script src="{{asset("js/jquery-3.3.1.min.js")}}"></script>
+  <script src="{{asset("js/jquery-migrate-3.0.1.min.js")}}"></script>
+  <script src="{{asset("js/jquery-ui.js")}}"></script>
+  <script src="{{asset("js/popper.min.js")}}"></script>
+  <script src="{{asset("js/bootstrap.min.js")}}"></script>
+  <script src="{{asset("js/owl.carousel.min.js")}}"></script>
+  <script src="{{asset("js/jquery.stellar.min.js")}}"></script>
+  <script src="{{asset("js/jquery.countdown.min.js")}}"></script>
+  <script src="{{asset("js/jquery.magnific-popup.min.js")}}"></script>
+  <script src="{{asset("js/bootstrap-datepicker.min.js")}}"></script>
+  <script src="{{asset("js/aos.js")}}"></script>
 
-  <script src="js/main.js"></script>
+  <script src="{{asset("js/main.js")}}"></script>
 
   </body>
 </html>

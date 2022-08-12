@@ -1085,7 +1085,7 @@ h1, h2, h3, h4, h5,
   line-height: 40px;
   border-radius: 50%; }
 
-.custom-pagination a {
+.custom-pagination a.active {
   background: #2f89fc;
   color: #fff; }
   .custom-pagination a:hover {

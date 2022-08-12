@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\WebsiteController::class, 'index'])->name('home');
-Route::get('/about-us', [\App\Http\Controllers\WebsiteController::class, 'about'])->name('about-us');
-Route::get('/single', [\App\Http\Controllers\WebsiteController::class, 'single'])->name('single');
+Route::get('/o-nama', [\App\Http\Controllers\WebsiteController::class, 'about'])->name('about-us');
+Route::get('/novosti-za-mlade', [\App\Http\Controllers\WebsiteController::class, 'youthNews'])->name('novosti-za-mlade');
+Route::get('/post/{post}', [\App\Http\Controllers\WebsiteController::class, 'single'])->name('single');
 
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
