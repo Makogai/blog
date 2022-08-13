@@ -12,6 +12,7 @@ class GeneralSettings extends Settings
     public string $instagram;
     public string $facebook;
     public string $youtube;
+    public string $aboutUs;
 
     public bool $site_active;
 

@@ -11,5 +11,6 @@ class CreateGeneralSettings extends SettingsMigration
         $this->migrator->add('general.instagram', 'test');
         $this->migrator->add('general.facebook', 'test');
         $this->migrator->add('general.youtube', 'test');
+        $this->migrator->add('general.aboutUs', '<b>ForYouth</b>');
     }
 }

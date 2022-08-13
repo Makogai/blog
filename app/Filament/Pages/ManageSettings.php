@@ -31,7 +31,7 @@ class ManageSettings extends SettingsPage
             TextInput::make('youtube')
                 ->label('Youtube url')
                 ->required(),
-         
+
             Toggle::make('site_active')->label('Active')->default(true)->inline(),
         ];
     }

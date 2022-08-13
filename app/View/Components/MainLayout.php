@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use App\Settings\GeneralSettings;
 use Illuminate\View\Component;
 use Vedmant\FeedReader\Facades\FeedReader;
@@ -12,6 +13,7 @@ class MainLayout extends Component
     public $facebook;
     public $instagram;
     public $youtube;
+    public $categories;
     /**
      * Create a new component instance.
      *
@@ -23,6 +25,8 @@ class MainLayout extends Component
         $this->facebook = app(GeneralSettings::class)->facebook;
         $this->instagram = app(GeneralSettings::class)->instagram;
         $this->youtube = app(GeneralSettings::class)->youtube;
+
+        $this->categories = Category::query()->where("slug", "LIKE", "%preporuke%")->get();
     }
 
     /**

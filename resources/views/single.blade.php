@@ -36,7 +36,7 @@
 
 
                     <div class="pt-5">
-                        <p>Kategorija:  <a href="../{{$post->category->slug}}">{{ $post->category->name }}</a>, Tagovi: @foreach($post->tags as $tag) <span class="px-2 py-1 text-white rounded" style="background-color: {{$post->category->color}};">{{$tag->name}}</span> @endforeach</p>
+                        <p>Kategorija:  <a href="../blog/{{$post->category->slug}}">{{ $post->category->name }}</a>, Tagovi: @foreach($post->tags as $tag) <span class="px-2 py-1 text-white rounded" style="background-color: {{$post->category->color}};">{{$tag->name}}</span> @endforeach</p>
                     </div>
 
 

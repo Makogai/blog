@@ -11,14 +11,14 @@
                     <div class="row same-height align-items-center">
                         <div class="col-md-12 col-lg-6">
                             <div class="post-entry">
-                                <span class="post-category text-white bg-success mb-3">Nature</span>
-                                <h2 class="mb-4"><a href="#">The 20 Biggest Fintech Companies In America 2019</a></h2>
+                                <span class="post-category text-white mb-3" style="background-color: {{$item->category->color}};">{{ $item->category->name }}</span>
+                                <h2 class="mb-4"><a href="/post/{{$item->id}}">{{ $item->title }}</a></h2>
                                 <div class="post-meta align-items-center text-left">
-                                    <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg"
+                                    <figure class="author-figure mb-0 mr-3 float-left"><img src="storage/{{$item->author->photo}}"
                                                                                             alt="Image"
                                                                                             class="img-fluid"></figure>
-                                    <span class="d-inline-block mt-1">By Carrol Atkinson</span>
-                                    <span>&nbsp;-&nbsp; February 10, 2019</span>
+                                    <span class="d-inline-block mt-1">Autor: {{ $item->author->name }}</span>
+                                    <span>&nbsp;-&nbsp; {{ $item->created_at }}</span>
                                 </div>
                             </div>
                         </div>
@@ -36,38 +36,20 @@
                     <div class="rounded border p-4">
                         <div class="row align-items-stretch">
 
+                            @foreach($recent as $item)
                             <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                                <a href="/single" class="d-flex post-sm-entry">
-                                    <figure class="mr-3 mb-0"><img src="images/img_1.jpg" alt="Image" class="rounded">
+                                <a href="/post/{{$item->id}}" class="d-flex post-sm-entry">
+                                    <figure class="mr-3 mb-0"><img src="storage/{{$item->banner}}" alt="Image" class="rounded">
                                     </figure>
                                     <div>
-                                        <span class="post-category bg-danger text-white m-0 mb-2">Travel</span>
-                                        <h2 class="mb-0">The 20 Biggest Fintech Companies In America 2019</h2>
-                                    </div>
-                                </a>
-                            </div>
+                                        <span class="post-category text-white mb-3" style="background-color: {{$item->category->color}};">{{ $item->category->name }}</span>
+                                        <h2 class="mb-0">{{ $item->title }}</h2>
 
-                            <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                                <a href="/single" class="d-flex post-sm-entry">
-                                    <figure class="mr-3 mb-0"><img src="images/img_2.jpg" alt="Image" class="rounded">
-                                    </figure>
-                                    <div>
-                                        <span class="post-category bg-warning text-white m-0 mb-2">Lifestyle</span>
-                                        <h2 class="mb-0">The 20 Biggest Fintech Companies In America 2019</h2>
                                     </div>
                                 </a>
                             </div>
+                            @endforeach
 
-                            <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-                                <a href="/single" class="d-flex post-sm-entry">
-                                    <figure class="mr-3 mb-0"><img src="images/img_3.jpg" alt="Image" class="rounded">
-                                    </figure>
-                                    <div>
-                                        <span class="post-category bg-success text-white m-0 mb-2">Nature</span>
-                                        <h2 class="mb-0">The 20 Biggest Fintech Companies In America 2019</h2>
-                                    </div>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,58 +57,50 @@
         </div>
     </div>
 
+    @if($last1 && $last2 && $last3)
     <div class="site-section">
         <div class="container">
 
             <div class="row align-items-stretch retro-layout">
 
+{{--                @foreach($recent4 as $item)--}}
+
                 <div class="col-md-5">
-                    <a href="/single" class="hentry img-1 h-100 gradient"
-                       style="background-image: url('images/img_4.jpg');">
-                        <span class="post-category text-white bg-danger">Travel</span>
+                    <a href="/post/{{$last1->id}}" class="hentry img-1 h-100 gradient"
+                       style="background-image: url('storage/{{$last1->banner}}');">
+                        <span class="post-category text-white" style="background-color: {{$last1->category->color}};">{{$last1->category->name}}</span>
                         <div class="text">
-                            <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                            <span>February 12, 2019</span>
+                            <h2>{{$last1->title}}</h2>
+                            <span>{{$last1->created_at}}</span>
                         </div>
                     </a>
                 </div>
-
                 <div class="col-md-7">
 
-                    <a href="/single" class="hentry img-2 v-height mb30 gradient"
-                       style="background-image: url('images/img_1.jpg');">
-                        <span class="post-category text-white bg-success">Nature</span>
-                        <div class="text text-sm">
-                            <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                            <span>February 12, 2019</span>
+                    <a href="/post/{{$last2->id}}" class="hentry img-2 v-height mb30 gradient"
+                       style="background-image: url('storage/{{$last2->banner}}');">
+                        <span class="post-category text-white" style="background-color: {{$last2->category->color}};">{{$last2->category->name}}</span>
+                        <div class="text">
+                            <h2>{{$last2->title}}</h2>
+                            <span>{{$last2->created_at}}</span>
                         </div>
                     </a>
 
-                    <div class="two-col d-block d-md-flex">
-                        <a href="/single" class="hentry v-height img-2 gradient"
-                           style="background-image: url('images/img_2.jpg');">
-                            <span class="post-category text-white bg-primary">Sports</span>
-                            <div class="text text-sm">
-                                <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                                <span>February 12, 2019</span>
-                            </div>
-                        </a>
-                        <a href="/single" class="hentry v-height img-2 ml-auto gradient"
-                           style="background-image: url('images/img_3.jpg');">
-                            <span class="post-category text-white bg-warning">Lifestyle</span>
-                            <div class="text text-sm">
-                                <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                                <span>February 12, 2019</span>
-                            </div>
-                        </a>
-                    </div>
+                    <a href="/post/{{$last3->id}}" class="hentry img-2 v-height gradient"
+                       style="background-image: url('storage/{{$last3->banner}}');">
+                        <span class="post-category text-white" style="background-color: {{$last3->category->color}};">{{$last3->category->name}}</span>
+                        <div class="text">
+                            <h2>{{$last3->title}}</h2>
+                            <span>{{$last3->created_at}}</span>
+                        </div>
+                    </a>
 
                 </div>
             </div>
 
         </div>
     </div>
-
+@endif
     <div class="site-section">
         <div class="container">
             <div class="row mb-5">

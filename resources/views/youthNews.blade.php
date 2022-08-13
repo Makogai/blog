@@ -1,12 +1,12 @@
 <x-main-layout>
 
-    <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('images/hero_1.jpg');">
+    <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('{{asset("images/$category->slug")}}.png');">
         <div class="container">
             <div class="row same-height justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <div class="post-entry text-center">
-                        <span class="post-category text-white bg-success mb-3">Novosti za mlade</span>
-                        <h1 class="mb-4"><a href="#">Novosti za mlade</a></h1>
+                        <span class="post-category text-white mb-3" style="background-color: {{$category->color}};">{{ $category->name }}</span>
+                        <h1 class="mb-4"><a href="#">{{ $category->name }}</a></h1>
                     </div>
                 </div>
             </div>
@@ -23,14 +23,14 @@
                     @foreach($news as $item)
                     <div class="entry2 mb-5">
                         <a href="/post/{{$item->id}}"><img src="/storage/{{$item->banner}}" alt="Image" class="w-100 img-fluid rounded"></a>
-                        <span class="post-category text-white bg-primary mb-3">Novosti za mlade</span>
+                        <span class="post-category text-white mb-3" style="background-color: {{$category->color}};">{{ $category->name }}</span>
                         <h2><a href="/post/{{$item->id}}">{{ $item->title }}</a></h2>
                         <div class="post-meta align-items-center text-left clearfix">
                             <figure class="author-figure mb-0 mr-3 float-left"><img src="/storage/{{$item->author->photo}}" alt="Image" class="img-fluid"></figure>
                             <span class="d-inline-block mt-1">Autor: <a href="#">{{ $item->author->name  }}</a></span>
                             <span>&nbsp;-&nbsp; {{ $item->created_at  }}</span>
                         </div>
-                        <p>{!! (strlen($item->content) > 100) ? substr(strip_tags($item->content),0,100).'...' : strip_tags($item->content) !!}</p>
+                        <p>{!! (strlen($item->content) > 200) ? substr(strip_tags($item->content),0,200).'...' : strip_tags($item->content) !!}</p>
                     </div>
                     @endforeach
 

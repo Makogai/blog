@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\WebsiteController::class, 'index'])->name('home');
 Route::get('/o-nama', [\App\Http\Controllers\WebsiteController::class, 'about'])->name('about-us');
+Route::get('/kontakt', [\App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
+Route::post('/contact', [\App\Http\Controllers\WebsiteController::class, 'contactSend'])->name('contact.post');
 Route::get('/novosti-za-mlade', [\App\Http\Controllers\WebsiteController::class, 'youthNews'])->name('novosti-za-mlade');
+Route::get('/blog/{category:slug}', [\App\Http\Controllers\WebsiteController::class, 'youthNews'])->name('blog');
 Route::get('/post/{post}', [\App\Http\Controllers\WebsiteController::class, 'single'])->name('single');
 
 //Route::get('/dashboard', function () {
