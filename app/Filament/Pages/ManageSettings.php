@@ -31,6 +31,9 @@ class ManageSettings extends SettingsPage
             TextInput::make('youtube')
                 ->label('Youtube url')
                 ->required(),
+            RichEditor::make('aboutUs')
+                ->label('O nama')
+                ->required(),
 
             Toggle::make('site_active')->label('Active')->default(true)->inline(),
         ];
