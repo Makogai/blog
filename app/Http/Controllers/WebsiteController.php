@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\NewPostMail;
 use App\Models\Category;
 use App\Settings\GeneralSettings;
+use Exception;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Mail;
@@ -23,12 +24,33 @@ class WebsiteController extends Controller
         $last3 = Post::query()->orderBy('created_at', 'desc')
             ->whereIn('blog_category_id', [3, 4, 5, 6])->with(['category', 'author'])->first();
 
+        $last111 = Post::query()->orderBy('created_at', 'desc')
+            ->where('blog_category_id', '1')->with(['category', 'author'])->first();
+        $last112 = Post::query()->orderBy('created_at', 'desc')
+            ->where('blog_category_id', '1')->where('id', '!=', $last111->id)->with(['category', 'author'])->take(3);
+
+        $last121 = Post::query()->orderBy('created_at', 'desc')
+            ->where('blog_category_id', '2')->with(['category', 'author'])->first();
+        $last122 = Post::query()->orderBy('created_at', 'desc')
+            ->where('blog_category_id', '2')->where('id', '!=', $last121->id)->with(['category', 'author'])->take(3);
+
+        $last131 = Post::query()->orderBy('created_at', 'desc')
+            ->whereIn('blog_category_id', [3,4,5,6])->with(['category', 'author'])->first();
+        $last132 = Post::query()->orderBy('created_at', 'desc')
+            ->whereIn('blog_category_id', [3,4,5,6])->where('id', '!=', $last121->id)->with(['category', 'author'])->take(3);
+
         return view('welcome')->with([
             'posts' => $a,
             'recent' => $recent,
             'last1' => $last1,
             'last2' => $last2,
             'last3' => $last3,
+            'last111' => $last111,
+            'last112' => $last112,
+            'last121' => $last121,
+            'last122' => $last122,
+            'last131' => $last131,
+            'last132' => $last132,
         ]);
     }
 
@@ -51,7 +73,7 @@ class WebsiteController extends Controller
         try {
             Mail::to($request->email)->queue(new NewPostMail($request->all()));
             return response()->json(['success' => true], 200);
-        } catch (\Exception $e){
+        } catch (Exception $e) {
             dd($e);
             return response()->json(['success' => false, 'error' => $e], 500);
         }

@@ -51,7 +51,7 @@ class PostResource extends Resource
 
                         Forms\Components\Textarea::make('excerpt')
                             ->rows(2)
-                            ->minLength(50)
+                            ->minLength(20)
                             ->maxLength(1000)
                             ->columnSpan([
                                 'sm' => 2,
@@ -70,12 +70,11 @@ class PostResource extends Resource
 
                         Forms\Components\BelongsToSelect::make('blog_author_id')
                             ->relationship('author', 'name')
-                            ->searchable()
+                        
                             ->required(),
 
                         Forms\Components\BelongsToSelect::make('blog_category_id')
                             ->relationship('category', 'name')
-                            ->searchable()
                             ->required(),
 
                         Forms\Components\DatePicker::make('published_at')

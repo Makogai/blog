@@ -49,7 +49,7 @@
             <a href="#" class="site-menu-toggle js-menu-toggle text-black d-inline-block d-xl-none"><span class="icon-menu h3"></span></a></div>
           </div>
 
-          <div class="col-12 d-none d-xl-block border-top">
+          <div class="col-12 d-none d-xl-block border-top sticky">
             <nav class="site-navigation text-center " role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
