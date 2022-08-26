@@ -177,9 +177,9 @@
                     </div>
                     @if($last111)
                     <div class="entry2 mb-5">
-                        <a href="/blog/{{$last111->id}}"><img src="storage/{{ $last111->banner }}" alt="Image" class="img-fluid rounded"></a>
+                        <a href="/post/{{$last111->id}}"><img src="storage/{{ $last111->banner }}" alt="Image" class="img-fluid rounded"></a>
                         <span class="post-category text-white mb-3" style="background-color: {{$last111->category->color}}">{{$last111->category->name}}</span>
-                        <h2><a href="/blog/{{$last111->id}}">{{$last111->title}}</a></h2>
+                        <h2><a href="/post/{{$last111->id}}">{{$last111->title}}</a></h2>
                         <div class="post-meta align-items-center text-left clearfix">
                             <figure class="author-figure mb-0 mr-3 float-left"><img src="storage/{{$last111->author->photo}}"
                                                                                     alt="Image" class="img-fluid">
@@ -194,11 +194,11 @@
                     @if($last112)
                     @foreach($last112 as $item)
                     <div class="entry4 d-block d-sm-flex">
-                        <figure class="figure order-2"><a href="blog/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
+                        <figure class="figure order-2"><a href="post/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
                                                                         class="img-fluid rounded"></a></figure>
                         <div class="text mr-4 order-1">
                             <span class="post-category text-white bg-primary mb-3" style="background-color: {{$item->category->color}};">{{ $item->category->name }}</span>
-                            <h2><a href="/blog/{{$item->id}}">{{ $item->title }}</a></h2>
+                            <h2><a href="/post/{{$item->id}}">{{ $item->title }}</a></h2>
                             <span class="post-meta mb-3 d-block">{{ $item->created_at }}</span>
                         </div>
                     </div>
@@ -212,9 +212,9 @@
                     </div>
                     @if($last121)
                     <div class="entry2 mb-5">
-                        <a href="/blog/{{$last121->id}}"><img src="storage/{{ $last121->banner }}" alt="Image" class="img-fluid rounded"></a>
+                        <a href="/post/{{$last121->id}}"><img src="storage/{{ $last121->banner }}" alt="Image" class="img-fluid rounded"></a>
                         <span class="post-category text-white mb-3" style="background-color: {{$last121->category->color}}">{{$last121->category->name}}</span>
-                        <h2><a href="/blog/{{$last121->id}}">{{$last121->title}}</a></h2>
+                        <h2><a href="/post/{{$last121->id}}">{{$last121->title}}</a></h2>
                         <div class="post-meta align-items-center text-left clearfix">
                             <figure class="author-figure mb-0 mr-3 float-left"><img src="storage/{{$last121->author->photo}}"
                                                                                     alt="Image" class="img-fluid">
@@ -229,11 +229,11 @@
                     @if($last122)
                     @foreach($last122 as $item)
                     <div class="entry4 d-block d-sm-flex">
-                        <figure class="figure order-2"><a href="blog/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
+                        <figure class="figure order-2"><a href="post/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
                                                                         class="img-fluid rounded"></a></figure>
                         <div class="text mr-4 order-1">
                             <span class="post-category text-white bg-primary mb-3" style="background-color: {{$item->category->color}};">{{ $item->category->name }}</span>
-                            <h2><a href="/blog/{{$item->id}}">{{ $item->title }}</a></h2>
+                            <h2><a href="/post/{{$item->id}}">{{ $item->title }}</a></h2>
                             <span class="post-meta mb-3 d-block">{{ $item->created_at }}</span>
                         </div>
                     </div>
@@ -244,12 +244,12 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="section-heading mb-5 d-flex align-items-center">
                         <h2>Preporuke</h2>
-                        <div class="ml-auto"><a href="/blog/{{$last131->category->slug}}" class="view-all-btn">View All</a></div>
+                        <div class="ml-auto"><a href="/post/{{$last131->category->slug}}" class="view-all-btn">View All</a></div>
                     </div>
                     <div class="entry2 mb-5">
-                        <a href="/blog/{{$last131->id}}"><img src="storage/{{ $last131->banner }}" alt="Image" class="img-fluid rounded"></a>
+                        <a href="/post/{{$last131->id}}"><img src="storage/{{ $last131->banner }}" alt="Image" class="img-fluid rounded"></a>
                         <span class="post-category text-white mb-3" style="background-color: {{$last131->category->color}}">{{$last131->category->name}}</span>
-                        <h2><a href="/blog/{{$last131->id}}">{{$last131->title}}</a></h2>
+                        <h2><a href="/post/{{$last131->id}}">{{$last131->title}}</a></h2>
                         <div class="post-meta align-items-center text-left clearfix">
                             <figure class="author-figure mb-0 mr-3 float-left"><img src="storage/{{$last131->author->photo}}"
                                                                                     alt="Image" class="img-fluid">
@@ -263,11 +263,11 @@
                     @if($last132)
                     @foreach($last132 as $item)
                     <div class="entry4 d-block d-sm-flex">
-                        <figure class="figure order-2"><a href="blog/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
+                        <figure class="figure order-2"><a href="post/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
                                                                         class="img-fluid rounded"></a></figure>
                         <div class="text mr-4 order-1">
                             <span class="post-category text-white bg-primary mb-3" style="background-color: {{$item->category->color}};">{{ $item->category->name }}</span>
-                            <h2><a href="/blog/{{$item->id}}">{{ $item->title }}</a></h2>
+                            <h2><a href="/post/{{$item->id}}">{{ $item->title }}</a></h2>
                             <span class="post-meta mb-3 d-block">{{ $item->created_at }}</span>
                         </div>
                     </div>
