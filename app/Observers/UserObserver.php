@@ -14,7 +14,7 @@ class UserObserver
     {
         //
         if ($post->photo == '' || $post->photo == NULL){
-            $post->photo = 'blog/ph.jpg';
+            $post->photo = 'blog/user.png';
             $post->save();
         }
     }
@@ -29,7 +29,7 @@ class UserObserver
     {
         //
         if ($post->photo == '' || $post->photo == NULL){
-            $post->photo = 'blog/ph.jpg';
+            $post->photo = 'blog/user.png';
             $post->save();
         }
     }
