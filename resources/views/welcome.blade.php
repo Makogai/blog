@@ -175,6 +175,7 @@
                         <h2>Novosti za mlade</h2>
                         <div class="ml-auto"><a href="/blog/novosti-za-mlade" class="view-all-btn">View All</a></div>
                     </div>
+                    @if($last111)
                     <div class="entry2 mb-5">
                         <a href="/blog/{{$last111->id}}"><img src="storage/{{ $last111->banner }}" alt="Image" class="img-fluid rounded"></a>
                         <span class="post-category text-white mb-3" style="background-color: {{$last111->category->color}}">{{$last111->category->name}}</span>
@@ -188,8 +189,9 @@
                         </div>
                         <p>{!! (strlen($last111->content) > 100) ? substr(strip_tags($last111->content),0,100).'...' : strip_tags($last111->content) !!}</p>
                     </div>
+                    @endif
 
-
+                    @if($last112)
                     @foreach($last112 as $item)
                     <div class="entry4 d-block d-sm-flex">
                         <figure class="figure order-2"><a href="blog/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
@@ -201,12 +203,14 @@
                         </div>
                     </div>
                     @endforeach
+                    @endif
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="section-heading mb-5 d-flex align-items-center">
                         <h2>Priče mladih</h2>
                         <div class="ml-auto"><a href="/blog/price-mladih" class="view-all-btn">View All</a></div>
                     </div>
+                    @if($last121)
                     <div class="entry2 mb-5">
                         <a href="/blog/{{$last121->id}}"><img src="storage/{{ $last121->banner }}" alt="Image" class="img-fluid rounded"></a>
                         <span class="post-category text-white mb-3" style="background-color: {{$last121->category->color}}">{{$last121->category->name}}</span>
@@ -220,8 +224,9 @@
                         </div>
                         <p>{!! (strlen($last121->content) > 100) ? substr(strip_tags($last121->content),0,100).'...' : strip_tags($last121->content) !!}</p>
                     </div>
+                    @endif
 
-
+                    @if($last122)
                     @foreach($last122 as $item)
                     <div class="entry4 d-block d-sm-flex">
                         <figure class="figure order-2"><a href="blog/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
@@ -233,7 +238,9 @@
                         </div>
                     </div>
                     @endforeach
+                    @endif
                 </div>
+                @if($last131)
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="section-heading mb-5 d-flex align-items-center">
                         <h2>Preporuke</h2>
@@ -253,7 +260,7 @@
                         <p>{!! (strlen($last131->content) > 100) ? substr(strip_tags($last131->content),0,100).'...' : strip_tags($last131->content) !!}</p>
                     </div>
 
-
+                    @if($last132)
                     @foreach($last132 as $item)
                     <div class="entry4 d-block d-sm-flex">
                         <figure class="figure order-2"><a href="blog/{{$item->id}}"><img src="storage/{{$item->banner}}" alt="Image"
@@ -265,8 +272,9 @@
                         </div>
                     </div>
                     @endforeach
+                    @endif
                 </div>
-
+@endif
 
             </div>
         </div>

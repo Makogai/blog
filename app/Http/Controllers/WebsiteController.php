@@ -26,18 +26,33 @@ class WebsiteController extends Controller
 
         $last111 = Post::query()->orderBy('created_at', 'desc')
             ->where('blog_category_id', '1')->with(['category', 'author'])->first();
-        $last112 = Post::query()->orderBy('created_at', 'desc')
-            ->where('blog_category_id', '1')->where('id', '!=', $last111->id)->with(['category', 'author'])->take(3);
+            if($last111){
+
+                $last112 = Post::query()->orderBy('created_at', 'desc')
+                ->where('blog_category_id', '1')->where('id', '!=', $last111->id)->with(['category', 'author'])->take(3);
+            }else {
+                $last112 = null;
+            }
 
         $last121 = Post::query()->orderBy('created_at', 'desc')
             ->where('blog_category_id', '2')->with(['category', 'author'])->first();
-        $last122 = Post::query()->orderBy('created_at', 'desc')
-            ->where('blog_category_id', '2')->where('id', '!=', $last121->id)->with(['category', 'author'])->take(3);
+            if($last121){
+
+                $last122 = Post::query()->orderBy('created_at', 'desc')
+                ->where('blog_category_id', '2')->where('id', '!=', $last121->id)->with(['category', 'author'])->take(3);
+            }else {
+                $last122 = null;
+            }
 
         $last131 = Post::query()->orderBy('created_at', 'desc')
             ->whereIn('blog_category_id', [3,4,5,6])->with(['category', 'author'])->first();
-        $last132 = Post::query()->orderBy('created_at', 'desc')
-            ->whereIn('blog_category_id', [3,4,5,6])->where('id', '!=', $last121->id)->with(['category', 'author'])->take(3);
+            if($last131){
+
+                $last132 = Post::query()->orderBy('created_at', 'desc')
+                ->whereIn('blog_category_id', [3,4,5,6])->where('id', '!=', $last121->id)->with(['category', 'author'])->take(3);
+            }else {
+                $last132 = null;
+            }
 
         return view('welcome')->with([
             'posts' => $a,
