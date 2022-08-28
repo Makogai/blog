@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ForYouth </title>
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MP30YX2PGB"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-MP30YX2PGB');
+      </script>
+
+    <title>ForYouth {{ $title ?? '' }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="robots" content="index, follow">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="language" content="Serbian">
+      <meta name="revisit-after" content="1 days">
+
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+
+
+      {{ $meta ?? '' }}
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
 
@@ -37,7 +63,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-6 logo">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0"><img src="{{asset("images/logo.PNG")}}" class="logo-img" style="max-width: 50%;" alt=""></a></h1>
+            <h1 class="mb-0"><a href="/" class="text-black h2 mb-0"><img src="{{asset("images/logo.PNG")}}" class="logo-img" style="max-width: 50%;" alt=""></a></h1>
           </div>
 
           <div class="col-6 mr-auto py-3 text-right" style="position: relative; top: 3px;">

@@ -32,5 +32,5 @@ class NewPostMail extends Mailable
      */
     public function build()
     {
-        return $this->from('foryouth@gmail.com', 'Foryouth Kontakt')->subject('Kontakt - '. $this->message['subject'])->markdown('mail.new_post');
+        return $this->from('foryouthmne@gmail.com', 'Foryouth Kontakt')->subject('Kontakt - '. $this->message['subject'])->markdown('mail.new_post');
     }}

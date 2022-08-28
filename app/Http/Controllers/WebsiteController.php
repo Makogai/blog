@@ -86,7 +86,7 @@ class WebsiteController extends Controller
     public function contactSend(Request $request)
     {
         try {
-            Mail::to($request->email)->queue(new NewPostMail($request->all()));
+            Mail::to("foryouthmne@gmail.com")->queue(new NewPostMail($request->all()));
             return response()->json(['success' => true], 200);
         } catch (Exception $e) {
             dd($e);

@@ -1,4 +1,23 @@
-<x-main-layout>
+<x-main-layout title=" - O name">
+
+    <x-slot name="meta">
+        <meta name="title" content="ForYouth - O nama">
+        <meta name="description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta name="keywords" content="blog,mladi,niksic,mladi niksica,konkursi niksic,konkursi za mlade,novosti maldih, preporuke, preporuke filmova, preporuke serija, prilike za mlade niksic, prilike za mlade, prilike za mlade crna gora">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://foryouth.me/o-nama">
+        <meta property="og:title" content="ForYouth - O nama">
+        <meta property="og:description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta property="og:image" content="{{asset('images/logo.png')}}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://foryouth.me/o-nama">
+        <meta property="twitter:title" content="ForYouth - O nama">
+        <meta property="twitter:description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta property="twitter:image" content="{{asset('images/logo.png')}}">
+    </x-slot>
 
     <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('images/hero_1.jpg');">
         <div class="container">

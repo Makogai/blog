@@ -1,4 +1,25 @@
-<x-main-layout>
+<x-main-layout title=" - Kontaktirajte nas">
+
+    <x-slot name="meta">
+        <meta name="title" content="ForYouth - Kontakt">
+        <meta name="description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta name="keywords" content="blog,mladi,niksic,mladi niksica,konkursi niksic,konkursi za mlade,novosti maldih, preporuke, preporuke filmova, preporuke serija, prilike za mlade niksic, prilike za mlade, prilike za mlade crna gora">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://foryouth.me/kontakt">
+        <meta property="og:title" content="ForYouth - Kontakt">
+        <meta property="og:description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta property="og:image" content="{{asset('images/logo.png')}}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://foryouth.me/kontakt">
+        <meta property="twitter:title" content="ForYouth - Kontakt">
+        <meta property="twitter:description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta property="twitter:image" content="{{asset('images/logo.png')}}">
+    </x-slot>
+
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         // Swal.fire({
@@ -129,13 +150,13 @@
 
                     <div class="p-4 mb-3 bg-white">
                         <p class="mb-0 font-weight-bold">Adresa</p>
-                        <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <p class="mb-4">//</p>
 
                         <p class="mb-0 font-weight-bold">Telefon</p>
-                        <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                        <p class="mb-4"><a href="#">//</a></p>
 
                         <p class="mb-0 font-weight-bold">Email</p>
-                        <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+                        <p class="mb-0"><a href="#">foryouthmne@gmail.com</a></p>
 
                     </div>
 

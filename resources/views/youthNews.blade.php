@@ -1,4 +1,24 @@
-<x-main-layout>
+<x-main-layout title=" - {{$category->name}}">
+
+    <x-slot name="meta">
+        <meta name="title" content="ForYouth - {{ $category->title }}">
+        <meta name="description" content="{{$category->description}}">
+        <meta name="keywords" content="{{$category->name}},blog,mladi,niksic,mladi niksica,konkursi niksic,konkursi za mlade,novosti maldih, preporuke, preporuke filmova, preporuke serija, prilike za mlade niksic, prilike za mlade, prilike za mlade crna gora">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://foryouth.me/blog/{{$category->slug}}">
+        <meta property="og:title" content="ForYouth - {{ $category->title }}">
+        <meta property="og:description" content="{{$category->description}}">
+        <meta property="og:image" content="{{asset("images/$category->slug")}}.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://foryouth.me/blog/{{$category->slug}}">
+        <meta property="twitter:title" content="ForYouth - {{ $category->title }}">
+        <meta property="twitter:description" content="{{$category->description}}">
+        <meta property="twitter:image" content="{{asset("images/$category->slug")}}.png">
+    </x-slot>
 
     <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('{{asset("images/$category->slug")}}.png');">
         <div class="container">

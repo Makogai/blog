@@ -1,4 +1,26 @@
-<x-main-layout>
+<x-main-layout title=" - Dobrodošli">
+
+    <x-slot name="meta">
+        <meta name="title" content="ForYouth">
+        <meta name="description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta name="keywords" content="blog,mladi,niksic,mladi niksica,konkursi niksic,konkursi za mlade,novosti maldih, preporuke, preporuke filmova, preporuke serija, prilike za mlade niksic, prilike za mlade, prilike za mlade crna gora">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://foryouth.me/">
+        <meta property="og:title" content="ForYouth - Dobrodošli">
+        <meta property="og:description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta property="og:image" content="{{asset('images/logo.png')}}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://foryouth.me/">
+        <meta property="twitter:title" content="ForYouth - Dobrodošli">
+        <meta property="twitter:description" content="ForYouth.me je blog koji je nastao kao potreba da se na jednom mjestu objavljuju informacije, teme i konkursi sa idejom da se mladi ljudi iz Nikšia.">
+        <meta property="twitter:image" content="{{asset('images/logo.png')}}">
+    </x-slot>
+{{--    <x-slot:title>--}}
+{{--        Početna--}}
+{{--    </x-slot:title>--}}
 
     <div class="slide-one-item home-slider owl-carousel">
 

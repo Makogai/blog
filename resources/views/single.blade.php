@@ -1,4 +1,24 @@
-<x-main-layout>
+<x-main-layout title=" - {{$post->title}}">
+
+        <x-slot name="meta">
+            <meta name="title" content="ForYouth - {{ $post->title }}">
+            <meta name="description" content="{!! (strlen($post->content) > 100) ? substr(strip_tags($post->content),0,100).'...' : strip_tags($post->content) !!}">
+            <meta name="keywords" content="blog,mladi,niksic,mladi niksica,konkursi niksic,konkursi za mlade,novosti maldih, preporuke, preporuke filmova, preporuke serija, prilike za mlade niksic, prilike za mlade, prilike za mlade crna gora,  @foreach($post->tags as $tag){{$tag->name}}, @endforeach">
+
+            <!-- Open Graph / Facebook -->
+            <meta property="og:type" content="website">
+            <meta property="og:url" content="https://foryouth.me/post/{{$post->id}}">
+            <meta property="og:title" content="ForYouth - {{ $post->title }}">
+            <meta property="og:description" content="{!! (strlen($post->content) > 100) ? substr(strip_tags($post->content),0,100).'...' : strip_tags($post->content) !!}">
+            <meta property="og:image" content="../storage/{{$post->banner}}">
+
+            <!-- Twitter -->
+            <meta property="twitter:card" content="summary_large_image">
+            <meta property="twitter:url" content="https://foryouth.me/post/{{$post->id}}">
+            <meta property="twitter:title" content="ForYouth - {{ $post->title }}">
+            <meta property="twitter:description" content="{!! (strlen($post->content) > 100) ? substr(strip_tags($post->content),0,100).'...' : strip_tags($post->content) !!}">
+            <meta property="twitter:image" content="../storage/{{$post->banner}}">
+        </x-slot>
 
     <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('../storage/{{$post->banner}}');">
         <div class="container">
