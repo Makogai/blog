@@ -97,7 +97,7 @@ class WebsiteController extends Controller
 
     public function single(Post $post)
     {
-        $recent = Post::query()->where('id', '=', $post->id)->orderBy('created_at', 'desc')->with(['category', 'author'])->take(3)->get();
+        $recent = Post::query()->whereNotIn('id', $post->id)->orderBy('created_at', 'desc')->with(['category', 'author'])->take(3)->get();
         return view('single')->with([
             'post' => $post->load(['category', 'author']),
             'recent' => $recent,
