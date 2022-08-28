@@ -224,9 +224,9 @@
                 @foreach($recent as $item)
                 <div class="col-md-6 col-lg-4">
                     <div class="entry2 mb-5">
-                        <a href="post/{{$item->slug}}"><img src="../storage/{{$item->banner}}" alt="Image" class=" w-100 img-fluid rounded"></a>
+                        <a href="../post/{{$item->slug}}"><img src="../storage/{{$item->banner}}" alt="Image" class=" w-100 img-fluid rounded"></a>
                         <span class="post-category text-white mb-3" style="background-color: {{$item->category->color}};">{{ $item->category->name }}</span>
-                        <h2><a href="post/{{$item->slug}}">{{ $item->title }}</a></h2>
+                        <h2><a href="../post/{{$item->slug}}">{{ $item->title }}</a></h2>
                         <div class="post-meta align-items-center text-left clearfix">
                             <figure class="author-figure mb-0 mr-3 float-left"><img src="../storage/{{$item->author->photo}}" alt="Image" class="img-fluid"></figure>
                             <span class="d-inline-block mt-1">By <a href="#">{{ $item->author->name }}</a></span>
