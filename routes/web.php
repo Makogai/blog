@@ -19,7 +19,7 @@ Route::get('/kontakt', [\App\Http\Controllers\WebsiteController::class, 'contact
 Route::post('/contact', [\App\Http\Controllers\WebsiteController::class, 'contactSend'])->name('contact.post')->middleware('active');
 Route::get('/novosti-za-mlade', [\App\Http\Controllers\WebsiteController::class, 'youthNews'])->name('novosti-za-mlade')->middleware('active');
 Route::get('/blog/{category:slug}', [\App\Http\Controllers\WebsiteController::class, 'youthNews'])->name('blog')->middleware('active');
-Route::get('/post/{post}', [\App\Http\Controllers\WebsiteController::class, 'single'])->name('single')->middleware('active');
+Route::get('/post/{post:slug}', [\App\Http\Controllers\WebsiteController::class, 'single'])->name('single')->middleware('active');
 
 Route::get('/inactive',function (){
     if (app(\App\Settings\GeneralSettings::class)->site_active)
