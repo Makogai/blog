@@ -12,6 +12,9 @@
           gtag('config', 'G-MP30YX2PGB');
       </script>
 
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8767414358867968"
+              crossorigin="anonymous"></script>
+
     <title>ForYouth {{ $title ?? '' }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
